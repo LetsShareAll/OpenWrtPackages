@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+  <meta charset='utf-8'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <link rel='icon' href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>⚙️</text></svg>' />
+  <link rel='stylesheet' href='https://downloads.immortalwrt.org/openwrt.css' />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark.min.css'>
+  <script src='https://cdn.jsdelivr.net/npm/marked/marked.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js'></script>
+  <script>hljs.highlightAll();</script>
+  <title>/immortalwrt/25.12.0/targets/mediatek/filogic/packages 的索引</title>
+  <style>
+    .copy-btn {
+      cursor: pointer;
+      margin-left: 5px;
+      display: inline-block;
+      transition: all 0.2s ease;
+    }
+    .copy-btn:active {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+    .copy-btn.success {
+      color: #4CAF50;
+      transform: scale(1.2);
+      animation: pop 0.3s ease-in-out;
+    }
+    @keyframes pop {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+    .search-input {
+      width: 100%;
+      padding: 5px 15px;
+      margin-bottom: 5px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 0.5em #999;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .search-input:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 0.5em rgba(0, 123, 255, 0.5);
+    }
+    /* README 区块样式 */
+    .readme-wrapper {
+      margin-top: 16px;
+      padding: 12px !important;
+      background: #f5f5f5;
+      border-top: 1px solid #e1e4e8;
+      box-shadow: 0 0 0.5em #999 !important;
+    }
+    .readme-wrapper h2 {
+      margin-top: 0;
+    }
+    .markdown-body {
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 12px;
+      border-radius: 4px;
+      background-color: #fff;
+    }
+    .readme-content {
+      background: #fafafa;
+      padding: 10px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      font-family: monospace;
+    }
+    .hljs {
+      border-radius: 4px;
+    }
+    /* 代码块复制按钮样式 */
+    .code-block-wrapper {
+      position: relative;
+    }
+    .copy-code-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      padding: 4px 8px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      z-index: 10;
+      transition: background-color 0.2s;
+    }
+    .copy-code-btn:hover {
+      background-color: #45a049;
+    }
+    .copy-code-btn.copied {
+      background-color: #2196F3;
+    }
+  </style>
+  <script>
+    function copyToClipboard(sha, btnElement) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(sha)
+          .then(() => {
+            btnElement.textContent = '✅';
+            btnElement.classList.add('success');
+            setTimeout(() => {
+              btnElement.textContent = '📋';
+              btnElement.classList.remove('success');
+            }, 1000);
+          })
+          .catch(() => showTooltip('复制失败', event));
+      } else {
+        prompt('请手动复制完整 SHA256：', sha);
+      }
+    }
+    function showTooltip(text, e) {
+      const tooltip = document.getElementById('tooltip');
+      tooltip.textContent = text;
+      tooltip.style.display = 'block';
+      tooltip.style.left = (e.clientX + 10) + 'px';
+      tooltip.style.top = (e.clientY + 10) + 'px';
+      setTimeout(() => tooltip.style.display = 'none', 1000);
+    }
+  </script>
+</head>
+<body>
+<div class='container'>
+<input type='text' id='globalSearch' placeholder='全局搜索...' class='search-input' onkeyup="if(event.key==='Enter' && this.value.trim()){window.location.href='/search.html?q='+encodeURIComponent(this.value.trim());}">
+<h1>索引：<a href='/'><em>根目录</em></a> / <a href='/immortalwrt/'>immortalwrt</a> / <a href='/immortalwrt/25.12.0/'>25.12.0</a> / <a href='/immortalwrt/25.12.0/targets/'>targets</a> / <a href='/immortalwrt/25.12.0/targets/mediatek/'>mediatek</a> / <a href='/immortalwrt/25.12.0/targets/mediatek/filogic/'>filogic</a> / <a href="/immortalwrt/25.12.0/targets/mediatek/filogic/packages/">packages</a> /</h1>
+<hr>
+<table>
+  <thead>
+    <tr>
+      <th class='n'>文件名</th>
+      <th class='m'>类型</th>
+      <th class='s'>大小</th>
+      <th class='h'>SHA256</th>
+      <th class='d'>修改日期</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class='n'>↩️ <a href='../'>上级目录</a>/</td>
+    <td class='m'>目录</td>
+    <td class='s'>-</td>
+    <td class='sh'>-</td>
+    <td class='d'>-</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='autocore-42.apk'>autocore-42.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>eced467...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("eced467d662d4e30bf7253d9d69bccbf69bdcb02425ba7644fa929c166ed685b", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='automount-10.apk'>automount-10.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>e87f4ac...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("e87f4aca7d2a2a2dbeae8713629279635f8576d18406db430425a5af308f2868", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='base-files-1~7259b8ca825.apk'>base-files-1~7259b8ca825.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>72K</td>
+    <td class='sh'>fd4595d...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("fd4595d1ed7fd007f791f7a3ec2fa499cf6b834723c957cf45f6054efb7c53ac", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='base-files-1~7259b8ca82.apk'>base-files-1~7259b8ca82.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>72K</td>
+    <td class='sh'>4b84d93...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("4b84d93605fd42b06f57d4204b69a52fa24161cdd275e85a9a2b18199f3d3d67", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='base-files-1922~2749ed32cc2.apk'>base-files-1922~2749ed32cc2.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>72K</td>
+    <td class='sh'>75ba8f4...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("75ba8f4ef9dd697cf6409700049ee6bd8e6801f44e608a1d521cdcf6e06ccb94", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='block-mount-2026.02.15~8d377aa6-r1.apk'>block-mount-2026.02.15~8d377aa6-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>32K</td>
+    <td class='sh'>f9e91be...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("f9e91be60c08f9d09e47bdcee039d144fa2c38e80e2da388bc1a3cd405590164", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='dropbear-2025.89-r1.apk'>dropbear-2025.89-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>124K</td>
+    <td class='sh'>30f9591...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("30f95919004fec215387727090086c9ec80f1e1d9ad019f72550a6fb5b4e6e74", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='fitblk-2.apk'>fitblk-2.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>46e8a8d...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("46e8a8d8aab01ff7af4f87376b0bba65f88be41638bdb47c090a6ff472474b88", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='fstools-2026.02.15~8d377aa6-r1.apk'>fstools-2026.02.15~8d377aa6-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>24K</td>
+    <td class='sh'>eec9ae5...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("eec9ae52af8417f5f32bc6b8669a09b3d43b36971488fab09f4c6e0cf8a8760b", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='fwtool-2025.10.03~04cd252e-r1.apk'>fwtool-2025.10.03~04cd252e-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>90cf7e1...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("90cf7e1adb28e3e54699bf0c7bcce50d4d00d2596e481ecda3a0db705f3d77a3", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📄 <a href='index.json'>index.json</a></td>
+    <td class='m'>json</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>7c396d8...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("7c396d8b3fab2c75feece0b43d0dc0bce0f232a86883ea46ac68d445f0d1fbbc", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kernel-6.12.74~d8e9101341e0873f0c6da08f5af2852c-r1.apk'>kernel-6.12.74~d8e9101341e0873f0c6da08f5af2852c-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>91fe816...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("91fe8163bffb9e1db740f26cd97b7bbf87aed2868c477e3856ba5c8f016273f3", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-asn1-decoder-6.12.74-r1.apk'>kmod-asn1-decoder-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>08965d9...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("08965d92a360e0c9b8fb3fc0910b2c8eed5e5eb53877e59259d2d44f09e90bd0", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-br-netfilter-6.12.74-r1.apk'>kmod-br-netfilter-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>12K</td>
+    <td class='sh'>416dd91...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("416dd91dc25d7650535fbdad64aa6794555c208fbc90e212fbba1334af4fcc27", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-cfg80211-6.12.74.6.18.7-r1.apk'>kmod-cfg80211-6.12.74.6.18.7-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>368K</td>
+    <td class='sh'>85219ae...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("85219ae3b48939827039cb4a7a82310529d34f9a8be08956fb4ffddd4693536a", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-acompress-6.12.74-r1.apk'>kmod-crypto-acompress-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>5cbc955...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("5cbc955fbddc615d4a97402a5fffb730407ccf17d2bb04da8f63204004db8f74", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-aead-6.12.74-r1.apk'>kmod-crypto-aead-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>e7940c2...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("e7940c2dba5055dabb3d23170d9297af28851ca38098abb35f61fde63469b316", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-arc4-6.12.74-r1.apk'>kmod-crypto-arc4-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>dde97e0...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("dde97e06eec20d62c4b66d114d7afb0297a2de6f7792781915b8ddcb09c8850a", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-authenc-6.12.74-r1.apk'>kmod-crypto-authenc-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>3349efc...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("3349efc18e95812c258f92acdd34508ddd547332d0d84c3e7569fc1a5cd5646e", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-blake2b-6.12.74-r1.apk'>kmod-crypto-blake2b-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>e4446bf...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("e4446bf6560fb2a9731a60041f3f33047500a195715b7ee228771fdf8ab7a1c7", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-ccm-6.12.74-r1.apk'>kmod-crypto-ccm-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>b3270e8...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("b3270e82d1b561a12f196e19248a862136424fdbc561441fa81c927fc6c39383", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-cmac-6.12.74-r1.apk'>kmod-crypto-cmac-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>ae3df7e...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("ae3df7e7b1870570085ab08640bfeba20fbbb7226cc0fd86ccf91456957fe589", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-crc32c-6.12.74-r1.apk'>kmod-crypto-crc32c-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>50a37cb...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("50a37cb5789cec0115ab162a6fd472728c8bbab0241693b02e4e72b5e64fdb49", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-ctr-6.12.74-r1.apk'>kmod-crypto-ctr-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>ae62d95...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("ae62d95e7efeaceab749354eb30680bf7a56139814a9f18fb4247237ddcac98b", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-des-6.12.74-r1.apk'>kmod-crypto-des-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>12K</td>
+    <td class='sh'>8075342...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("807534247906e54cf91397dc961274321f11240f8ee6c5890ade08bac56cdc89", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-ecb-6.12.74-r1.apk'>kmod-crypto-ecb-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>106971a...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("106971a1966815c9ca78fdb8fc34749d10c66917075e559e1821a2bc89512304", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-gcm-6.12.74-r1.apk'>kmod-crypto-gcm-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>51c3600...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("51c36009d975df288c98a09c8cad5c0bf27e72a0e052e248a6da84d06e609f08", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-geniv-6.12.74-r1.apk'>kmod-crypto-geniv-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>f821ce2...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("f821ce213b0bf102f60e7e6c4f6d5f5887b4c5f2b2664c5eba4697864e6658ee", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-gf128-6.12.74-r1.apk'>kmod-crypto-gf128-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>a35c5ff...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("a35c5ff62961b5980bde2e1856444800146bfd8fb2fb95cd68e0536ec68efdda", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-ghash-6.12.74-r1.apk'>kmod-crypto-ghash-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>820f6b5...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("820f6b5358224689b37f7aa9f691d13cb16ed2fb0c338dd329d46f1947edf405", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-hash-6.12.74-r1.apk'>kmod-crypto-hash-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>1852c74...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("1852c7464086acccf6dd7b208968caa1683efc1e080ed212de5e89498b6b8533", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-hmac-6.12.74-r1.apk'>kmod-crypto-hmac-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>15a29db...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("15a29dbe3d1355374941de0c1df17026f84124242c1caa9fbc6461dadb9c8dc7", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-hw-safexcel-6.12.74-r1.apk'>kmod-crypto-hw-safexcel-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>44K</td>
+    <td class='sh'>3b1689f...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("3b1689f3b196b526a2be56a09c5bfac777b5a63c55d8561ea1a312e782129050", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-manager-6.12.74-r1.apk'>kmod-crypto-manager-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>005d849...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("005d849386e67e01135d358001bc00ef55f26cbdc9d24527d7da7532579ef3d6", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-md5-6.12.74-r1.apk'>kmod-crypto-md5-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>b41eefe...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("b41eefe5bf91df2f4021f665a4f97eec6d77b8cebd9ea6fb566752f4bf671993", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-null-6.12.74-r1.apk'>kmod-crypto-null-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>5647cfa...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("5647cfaf6dc0a2b34822a17c60ab364371c6d6b899684dc661c03267dfb4d4db", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-rng-6.12.74-r1.apk'>kmod-crypto-rng-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>3f9e5bb...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("3f9e5bba328f198aa85fbc13427abd983eb9ce4f342782b769e2658a95aafe27", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-seqiv-6.12.74-r1.apk'>kmod-crypto-seqiv-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>e466b56...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("e466b56b9893ea1dcfe28e2dcc161f8564d0ecf6715506558bb4672cfc331503", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-sha1-6.12.74-r1.apk'>kmod-crypto-sha1-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>5d6f9b6...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("5d6f9b69f6ccd93c88595bbc3a99166f23f62ee88d9d3cb2ef907f0d4adf2619", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-sha256-6.12.74-r1.apk'>kmod-crypto-sha256-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>fbb2612...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("fbb26124212cab61fe57e20bd94d11c52039195a59e6baf73586dc6e7158da4f", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-sha3-6.12.74-r1.apk'>kmod-crypto-sha3-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>ae0b6dc...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("ae0b6dc9e44e96ae76ea758fa34ade00b1e1d844932fce715d4e94de9697d110", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-sha512-6.12.74-r1.apk'>kmod-crypto-sha512-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>44e80d0...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("44e80d058a62e7d41d34918533abfe0a411091a7791e4754c4d0d23e0a9e3744", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-user-6.12.74-r1.apk'>kmod-crypto-user-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>28K</td>
+    <td class='sh'>34c286b...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("34c286b4d4bef780fc191c653563deca4fb3dd3e7008105b7fd014e9b73012fc", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-crypto-xxhash-6.12.74-r1.apk'>kmod-crypto-xxhash-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>976d792...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("976d792a7461b21d690bd52e6aad54dc82bb012a507523f1d4e2d755de659ebf", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-eeprom-at24-6.12.74-r1.apk'>kmod-eeprom-at24-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>1b6c6c3...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("1b6c6c30ac0fa03beac6273b7aec03b9a05d951b436e796aadb3bbe66a280e33", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-fs-btrfs-6.12.74-r1.apk'>kmod-fs-btrfs-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>688K</td>
+    <td class='sh'>67e99cf...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("67e99cff7736aa3a2fe2b29bdcc673a61fd47f1e8998edd53f643271beb399f4", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-fs-exfat-6.12.74-r1.apk'>kmod-fs-exfat-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>44K</td>
+    <td class='sh'>c6c16a0...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("c6c16a0e1f1b5a0327fba359ceb23c3b7643e3757120772b6b61783750a04b08", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-fs-ext4-6.12.74-r1.apk'>kmod-fs-ext4-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>839a54f...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("839a54fad9214ad14d51e343dfa3ddf6671fc9732e4c7a3d662ae14ca6de4cae", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-fs-msdos-6.12.74-r1.apk'>kmod-fs-msdos-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>f53d3f5...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("f53d3f58148dc3d8aac16840de28c6364f4f50a627c2944e9e5c0f6f440dbc79", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-fs-ntfs3-6.12.74-r1.apk'>kmod-fs-ntfs3-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>132K</td>
+    <td class='sh'>0658428...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("0658428603d9b5e3bb2c6e0ad4262be0801e9a763b5b58558884dd1635e285d4", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-fs-vfat-6.12.74-r1.apk'>kmod-fs-vfat-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>52K</td>
+    <td class='sh'>859df2c...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("859df2cd9c0c2cab856eeac584be152f911a34de25b042663e91c641df8f25bc", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-fuse-6.12.74-r1.apk'>kmod-fuse-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>76K</td>
+    <td class='sh'>661c348...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("661c3485b3a656aecc1e090d0db4f0f10474846c31396e495194580782892d90", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-gpio-button-hotplug-6.12.74-r5.apk'>kmod-gpio-button-hotplug-6.12.74-r5.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>722f98a...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("722f98aa8c27f2f34753033bd5acb987de8d3dbbb6d6272cba10d33beafbf284", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-hwmon-core-6.12.74-r1.apk'>kmod-hwmon-core-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>a138851...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("a138851d18b6a40b8a66351b38ce1a9e212a30555b4a538d12d18117b4ed2175", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-hwmon-pwmfan-6.12.74-r1.apk'>kmod-hwmon-pwmfan-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>7a7b3f5...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("7a7b3f580e4c5b3cc3be70fe8be999312c7f236b6e960150f06894021aa5dded", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-i2c-core-6.12.74-r1.apk'>kmod-i2c-core-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>aca3e93...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("aca3e93b181bcce15b0f7a15c2a5c5ece09b46cbcad7583e4d11956631cdbafe", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-i2c-mux-6.12.74-r1.apk'>kmod-i2c-mux-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>6fda1cc...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("6fda1cca32cf26deea1a57a244dbfc838f5818562a666d4b6f4f0fbfb90055e4", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-i2c-mux-pca954x-6.12.74-r1.apk'>kmod-i2c-mux-pca954x-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>f031909...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("f031909e09061504e4b4920bc6b8055f60fe790c1d962ecc9ba694b7a85abbae", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-inet-diag-6.12.74-r1.apk'>kmod-inet-diag-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>20K</td>
+    <td class='sh'>d3eaff4...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("d3eaff40d4d1296282946e869170798ad3399ce0b863bbdc4f2dd18f521f4110", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-ip6tables-6.12.74-r1.apk'>kmod-ip6tables-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>d945f6a...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("d945f6a22c673f10c5ab541375ecd83d7d266bf778ee0f85c45c9034b9ac8b2a", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-ipt-conntrack-6.12.74-r1.apk'>kmod-ipt-conntrack-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>12K</td>
+    <td class='sh'>b0ddf82...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("b0ddf821585c513de91a2c9cacf42eb71941bc0cee791d27c4fa9a9c91b2103e", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-ipt-core-6.12.74-r1.apk'>kmod-ipt-core-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>20K</td>
+    <td class='sh'>81edda1...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("81edda197a9564ada4dd8c8ca74d13eeb30f1ff3516c1e1613d2924f812f62a2", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-ipt-extra-6.12.74-r1.apk'>kmod-ipt-extra-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>12K</td>
+    <td class='sh'>92478d7...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("92478d74740b791ead2f818ede7034c9ef2868f35694acfbbf3787d9c5c671bf", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-ipt-fullconenat-6.12.74.2023.01.01~74c5e6f3-r1.apk'>kmod-ipt-fullconenat-6.12.74.2023.01.01~74c5e6f3-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>12K</td>
+    <td class='sh'>d388fc2...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("d388fc2e37dfff94aed30e1836e97828cd85348cc316ab11e1f8cf76da013378", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-ipt-nat-6.12.74-r1.apk'>kmod-ipt-nat-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>b468e8d...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("b468e8d714ddd1b50dc77fcff4e9c2bcc79da0bb99bfa71f32a52e70e8787123", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-ipt-nat6-6.12.74-r1.apk'>kmod-ipt-nat6-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>7698a1a...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("7698a1af70718add8a5d4575da2508052fbd6cf7bb29504531a93e1aebdba6cd", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-ipt-physdev-6.12.74-r1.apk'>kmod-ipt-physdev-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>5d8eb4a...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("5d8eb4a3dc1f4132a740363a923f29390c6ba0e0a8858e958ae1d1fc8cbd6ac3", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-leds-gpio-6.12.74-r1.apk'>kmod-leds-gpio-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>0b26732...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("0b26732c0d3e071aa322a47e12f91b34b8f5d340e02899db8006d0caf87f0c7d", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-lib-crc16-6.12.74-r1.apk'>kmod-lib-crc16-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>16584e0...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("16584e09b23a8a9b95742b031194907d18d1b4774bd4459e255c052d07fa1fc1", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-lib-crc32c-6.12.74-r1.apk'>kmod-lib-crc32c-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>b888d4f...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("b888d4ff50a5544e0f424777c50fe0806ca6ab9e40173aca75ffa903042e1295", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-lib-crc-ccitt-6.12.74-r1.apk'>kmod-lib-crc-ccitt-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>020f014...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("020f014f41dc4064a4a35047d171f481fa07a243c26044176e868e5d9d92328e", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-lib-crc-itu-t-6.12.74-r1.apk'>kmod-lib-crc-itu-t-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>68af786...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("68af786fab2cf4071921677d4963ebfe8a2e23bfd5c5cc61dc12394a4c4f92b7", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-lib-lzo-6.12.74-r1.apk'>kmod-lib-lzo-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>ee4d8d0...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("ee4d8d07a2e6141238912617228fba812f8f4970bc3614f640fc87b5c78de33c", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-libphy-6.12.74-r1.apk'>kmod-libphy-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>1206117...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("1206117463c13508c6a8b324e5fd282a2b5736c3f8b5bcaac0cb357ea6756bfd", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-lib-raid6-6.12.74-r1.apk'>kmod-lib-raid6-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>80K</td>
+    <td class='sh'>5cc7135...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("5cc7135ea93138d6f7d0423c443b60c63c78576f12f5ec6fd17eefa03ec0463b", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-lib-textsearch-6.12.74-r1.apk'>kmod-lib-textsearch-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>bd0fd3e...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("bd0fd3efc3f90b3cadfc188e002dbb5eaf2cef5a01002e78a2bddef2836f130c", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-lib-xor-6.12.74-r1.apk'>kmod-lib-xor-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>87173f4...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("87173f4085ff5e6e2cfe49d5219d391e0079e84ecfec83e36d2927029648ea4e", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-lib-xxhash-6.12.74-r1.apk'>kmod-lib-xxhash-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>e1e8a03...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("e1e8a03f7321c6134af9f056a207b2dcc2c50fc3b4cec504f6d1e96581ee2ff7", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-lib-zlib-deflate-6.12.74-r1.apk'>kmod-lib-zlib-deflate-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>b36c273...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("b36c273f8682238dfb04df47b31f2bf2a8abe6cd23731f27d974e887cdaeb698", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-lib-zlib-inflate-6.12.74-r1.apk'>kmod-lib-zlib-inflate-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>717bbef...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("717bbefa6e8021ea27fd851958b3050a858a7a90ef9b6471a32647fe97452fee", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-lib-zstd-6.12.74-r1.apk'>kmod-lib-zstd-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>e56977a...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("e56977ad00732914acf6f59bb7df5bc25ade5ad824b96bde967283523fac6703", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-mac80211-6.12.74.6.18.7-r1.apk'>kmod-mac80211-6.12.74.6.18.7-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>544K</td>
+    <td class='sh'>36a3137...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("36a313792077ae760cb728c8b25387a93c46b62ca57679cf145555d098ad826e", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-macvlan-6.12.74-r1.apk'>kmod-macvlan-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>16K</td>
+    <td class='sh'>7c430a1...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("7c430a174057d872fdb1a4c82f103567fc19065194ce978828993fcf82ffdfce", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-mppe-6.12.74-r1.apk'>kmod-mppe-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>ea8813a...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("ea8813a6fa23ddab4bd87f8b7b846e31796f6fb610f44a8fd18723248558cbc8", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-mt76-connac-6.12.74.2026.03.19~39c960c3-r2.apk'>kmod-mt76-connac-6.12.74.2026.03.19~39c960c3-r2.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>72K</td>
+    <td class='sh'>cba3c33...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("cba3c331399f3a3a745a2c067093e2ea81598d7ea6fc3d93cb7a7362ead3d87e", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-mt76-core-6.12.74.2026.03.19~39c960c3-r2.apk'>kmod-mt76-core-6.12.74.2026.03.19~39c960c3-r2.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>88K</td>
+    <td class='sh'>ab1f904...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("ab1f9040276dfcc846d34d0619eef53b62439156464635f0849a9bbfbc5f53c7", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-mt7996-233-firmware-6.12.74.2026.03.19~39c960c3-r2.apk'>kmod-mt7996-233-firmware-6.12.74.2026.03.19~39c960c3-r2.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>3.1M</td>
+    <td class='sh'>51e7a5b...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("51e7a5b15ab44d3e1ffd3c33a452f5f71fd6ec17be2b41b53b435b29210afc71", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-mt7996e-6.12.74.2026.03.19~39c960c3-r2.apk'>kmod-mt7996e-6.12.74.2026.03.19~39c960c3-r2.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>140K</td>
+    <td class='sh'>719124e...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("719124e600fa4eacf49f5f3e403c82dd2594a90e852c33ddb026b821909a7c93", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-mt7996-firmware-6.12.74.2026.03.19~39c960c3-r2.apk'>kmod-mt7996-firmware-6.12.74.2026.03.19~39c960c3-r2.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>3.1M</td>
+    <td class='sh'>01f9bbc...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("01f9bbca67eb200169b9f5d1ff66a010013752a191d16cb2d788ebc5daab7ac1", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-mt7996-firmware-common-6.12.74.2026.03.19~39c960c3-r2.apk'>kmod-mt7996-firmware-common-6.12.74.2026.03.19~39c960c3-r2.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>192K</td>
+    <td class='sh'>68ae294...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("68ae294eff462ea5e37b20326b3f5aaa8aa4617b206afe7003d237277a9a8a0b", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nf-conntrack-6.12.74-r1.apk'>kmod-nf-conntrack-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>68K</td>
+    <td class='sh'>a4ebebc...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("a4ebebcaa138533283fc533e37d62c7701960cae246e9b68598a27e676eadc5a", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nf-conntrack6-6.12.74-r1.apk'>kmod-nf-conntrack6-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>c9d9ca4...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("c9d9ca42679db08ff57607b92832d5061b2bd992ecdab7903d07c9efd0a299bd", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nf-conntrack-netlink-6.12.74-r1.apk'>kmod-nf-conntrack-netlink-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>24K</td>
+    <td class='sh'>09e6e5d...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("09e6e5d9b5cc2be0b98b177a3d0cfb325a3319d21f1bc27bf34b22ea69c8e20b", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nf-flow-6.12.74-r1.apk'>kmod-nf-flow-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>20K</td>
+    <td class='sh'>853538c...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("853538cdc51701989c3f0ba9e8eea641c83d0df4993922182fee55fa4f97c0c1", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nf-ipt-6.12.74-r1.apk'>kmod-nf-ipt-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>28K</td>
+    <td class='sh'>0ce4d97...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("0ce4d977e2f19b1858919c7c5b71115623084c023a1e6f85d1a6af454881a178", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nf-ipt6-6.12.74-r1.apk'>kmod-nf-ipt6-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>12K</td>
+    <td class='sh'>7033d59...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("7033d599e4fbc557e3a577cef40fd8039dbadc104201414850e9a214f2167958", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nf-ipvs-6.12.74-r1.apk'>kmod-nf-ipvs-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>108K</td>
+    <td class='sh'>2358896...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("23588969185a95b87cf802665ed8544de3af6834b17ccdc5c8ef5b40cd97948a", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nf-log-6.12.74-r1.apk'>kmod-nf-log-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>12K</td>
+    <td class='sh'>9a369cd...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("9a369cd08b737f0019c8893ba61b92528c344f59d47c9043b9672346e03026ed", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nf-log6-6.12.74-r1.apk'>kmod-nf-log6-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>81c0995...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("81c09957a10e8c1851e593551aae918d32807aff0fa32e886fda3353cdab7913", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nf-nat-6.12.74-r1.apk'>kmod-nf-nat-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>20K</td>
+    <td class='sh'>bfb23bb...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("bfb23bb58c4db7fb5b932737fcbdf9b1d6e7b81071ecc214b99a9fc0662cc411", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nf-nat6-6.12.74-r1.apk'>kmod-nf-nat6-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>f45cef2...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("f45cef2a60e028fb220f9662c1ff2ac75e2acaa62431a60ecd6559e533675b69", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nf-nathelper-6.12.74-r1.apk'>kmod-nf-nathelper-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>fbbb2a6...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("fbbb2a6c02e268f8f28e1bd9d0e8013e9a3e98f968f50000b12a685216affa0c", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nf-nathelper-extra-6.12.74-r1.apk'>kmod-nf-nathelper-extra-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>76K</td>
+    <td class='sh'>e0df722...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("e0df722c1a4a2555675c9bc4cdf79d038bbff2a1fb060635b0e14ffc27ccf5a5", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nfnetlink-6.12.74-r1.apk'>kmod-nfnetlink-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>154ff56...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("154ff56bc7055fd69a4c8a533516c3c63bf9936981193870033d48d875ecc94e", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nf-reject-6.12.74-r1.apk'>kmod-nf-reject-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>563f8dc...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("563f8dc511d6bbe674e8dc4d01dadd1629b326cc2e2b7c7463ea072ae1639da6", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nf-reject6-6.12.74-r1.apk'>kmod-nf-reject6-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>8a4fefb...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("8a4fefbc79c0a2521db34ab7a9381a7faea66de22ffdcc2545210418e63067cd", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nft-compat-6.12.74-r1.apk'>kmod-nft-compat-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>12K</td>
+    <td class='sh'>3182206...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("318220649a1493c2e1475d61ddb02cb2cc7761d5d4b43a4d054e19c1f829c927", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nft-core-6.12.74-r1.apk'>kmod-nft-core-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>160K</td>
+    <td class='sh'>6fe8c12...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("6fe8c128d83c16be0d5d5fb90f6cebec24f227f689ead6c2d330b44d6e80094b", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nft-fib-6.12.74-r1.apk'>kmod-nft-fib-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>12K</td>
+    <td class='sh'>9a879a4...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("9a879a4c5d0fecdfdb628e6ee96bb0509c9a56be4ee61e167c1dce864a6ab5de", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nft-fullcone-6.12.74.2023.05.17~07d93b62-r3.apk'>kmod-nft-fullcone-6.12.74.2023.05.17~07d93b62-r3.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>16K</td>
+    <td class='sh'>4aec1e4...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("4aec1e43dad0cdc51c16b02aedf2b634df5f77c5c48eece10b16e98189b69813", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nft-nat-6.12.74-r1.apk'>kmod-nft-nat-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>12K</td>
+    <td class='sh'>522aae0...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("522aae07e26f2a0ff3176bc1c5a9f9f9843227d69cd3514f94166d23ec78aa31", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nft-offload-6.12.74-r1.apk'>kmod-nft-offload-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>12K</td>
+    <td class='sh'>e3cf01c...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("e3cf01cfdbd04e822c1c8e74cce9e1e408876399a8e11f357bd1e4c270b9c205", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nf-tproxy-6.12.74-r1.apk'>kmod-nf-tproxy-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>bb7dea2...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("bb7dea28b595c469ec0c68899007242ac9557de77a54e727e0d672ddfafa5ff2", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nft-tproxy-6.12.74-r1.apk'>kmod-nft-tproxy-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>226c56a...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("226c56aa9cf8c25a9ed2cf876bab67394376d1020806426bb4e4076295d8b61e", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nls-base-6.12.74-r1.apk'>kmod-nls-base-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>bc4884a...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("bc4884abfae63d431a4fa02e80e612035f19a69e228068885cd59c7d2612dc3f", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nls-cp437-6.12.74-r1.apk'>kmod-nls-cp437-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>b76b592...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("b76b592e8f51b8121841cff0fa51d53328e672ff0c7589c2f32f2c45858c76fa", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nls-cp932-6.12.74-r1.apk'>kmod-nls-cp932-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>44K</td>
+    <td class='sh'>e155342...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("e155342b68d9e37b12c356f1aba87bb50373dd309cb4be9d3b7aa6404c03baa9", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nls-cp936-6.12.74-r1.apk'>kmod-nls-cp936-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>84K</td>
+    <td class='sh'>a267a42...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("a267a4296c758754bc3d93188f45f56f64430ab84f8ee486559c8a7d504e9463", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nls-cp950-6.12.74-r1.apk'>kmod-nls-cp950-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>60K</td>
+    <td class='sh'>5421946...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("5421946582da636ba67c0d06633886d210301da7026f49f5a520372ec043e283", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nls-iso8859-1-6.12.74-r1.apk'>kmod-nls-iso8859-1-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>291ef10...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("291ef106eb2c94cac7b341443735517e91e89f5657d5c79d7eeae2644de75a23", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-nls-utf8-6.12.74-r1.apk'>kmod-nls-utf8-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>5f1fd86...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("5f1fd86e404ae175d07b8e1a92ef1552b9e2d09174e532fb91be036f458b2fc2", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-oaf-6.12.74.2025.07.03~a9e4637b-r1.apk'>kmod-oaf-6.12.74.2025.07.03~a9e4637b-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>852K</td>
+    <td class='sh'>c4d5417...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("c4d541742303777c0e488dfcb3974863042ce59e31e2521d06bb3297de05be78", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-phy-aquantia-6.12.74-r1.apk'>kmod-phy-aquantia-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>12K</td>
+    <td class='sh'>2608259...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("2608259159b6695a3993e256816e0efef1c266beeabc800f20d84d078d87f064", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-phylink-6.12.74-r1.apk'>kmod-phylink-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>1cc0e09...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("1cc0e09d32f9613afe051a81d1fa3159f2c82c8411b50ad6e77033c507ab75f0", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-ppp-6.12.74-r1.apk'>kmod-ppp-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>32K</td>
+    <td class='sh'>a58b5e4...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("a58b5e4abc481cf79a651f260e9fe1c4e35852d5129399679abd15d9b9240091", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-pppoe-6.12.74-r1.apk'>kmod-pppoe-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>12K</td>
+    <td class='sh'>76f57c9...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("76f57c98e75d016607f529ef496490253a03a219224770796f5dcf25ba1caa60", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-pppox-6.12.74-r1.apk'>kmod-pppox-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>42bff17...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("42bff1766919a01c2e7f3f1be46d9c5f496a208ba042c55e4a0db425a3a262c0", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-regmap-core-6.12.74-r1.apk'>kmod-regmap-core-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>ac71a5c...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("ac71a5c2aece8a289133ae8c35bddac893ff5623ef19c3c19c5bb6ae24306012", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-regmap-i2c-6.12.74-r1.apk'>kmod-regmap-i2c-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>baad745...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("baad7452e333f9a95f3dd79aed87b4b32048b8ab58fed22ee2dea359b10be059", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-rtc-pcf8563-6.12.74-r1.apk'>kmod-rtc-pcf8563-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>f7f6e68...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("f7f6e6894f24cd25cfead4861cbd6276774a40f482d7c55c806606e242718749", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-sched-act-vlan-6.12.74-r1.apk'>kmod-sched-act-vlan-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>d1d179f...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("d1d179f8a354959c74655dae37270059f430151fd08b94a531ef070c5310f73d", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-sched-bpf-6.12.74-r1.apk'>kmod-sched-bpf-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>12K</td>
+    <td class='sh'>f8d8d35...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("f8d8d3527d668e48743a2f8c54d09ae1b46f038aa4e66d44141aba5c1c424848", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-sched-core-6.12.74-r1.apk'>kmod-sched-core-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>80K</td>
+    <td class='sh'>9f7fc9e...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("9f7fc9eb78f3d1792da341aff077cf8789a7c5bce5612c258394e1c32fb776e9", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-sched-flower-6.12.74-r1.apk'>kmod-sched-flower-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>28K</td>
+    <td class='sh'>55bf1f4...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("55bf1f4eecd6722a5e2f46b1d664b423e65fc5e5b2680ce78fa48100ec686ca2", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-scsi-core-6.12.74-r1.apk'>kmod-scsi-core-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>33383b5...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("33383b5c8e7e9a8ebf5fb4e5195a165cef26e13b1b37a59d0925e676e2332042", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-sfp-6.12.74-r1.apk'>kmod-sfp-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>20K</td>
+    <td class='sh'>b747f28...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("b747f28a0ce831c34aa6edee49177d4c28e7bcbcf53be35ec06a82b03c794d6d", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-slhc-6.12.74-r1.apk'>kmod-slhc-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>3811262...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("3811262b077623f5834bad3a280b82b5947bee8a9176ac216cef0ff06620c1cf", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-tun-6.12.74-r1.apk'>kmod-tun-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>28K</td>
+    <td class='sh'>2920475...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("2920475459c7f5251ca54081595d3fb1f6e858485f04d2ea3ea916a9f6606b50", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-usb3-6.12.74-r1.apk'>kmod-usb3-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>28K</td>
+    <td class='sh'>32c811d...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("32c811d5c54aa16ee489e53fafd817dcce2d913bc2c72d4e4ecbf69277aa738a", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-usb-common-6.12.74-r1.apk'>kmod-usb-common-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>e4879ce...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("e4879cebc024f281ab0b823aa7651ff9da87dda3b3cc53df8cc1408f3db27fc5", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-usb-core-6.12.74-r1.apk'>kmod-usb-core-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>128K</td>
+    <td class='sh'>d4bed9e...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("d4bed9e4fbef40b7c4f2746410965da1ad32b39722e7d68f1eda2bf7ab44fce1", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-usb-storage-6.12.74-r1.apk'>kmod-usb-storage-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>36K</td>
+    <td class='sh'>35c31e6...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("35c31e6bffed09b82cc13f213ba1c30e2bb526327bed2be52b955a345992cafd", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-usb-storage-extras-6.12.74-r1.apk'>kmod-usb-storage-extras-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>48K</td>
+    <td class='sh'>ab7eece...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("ab7eece45bf6a33e78f595e70822d449e303c5d5cdecb09a258472b93b33d649", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-usb-storage-uas-6.12.74-r1.apk'>kmod-usb-storage-uas-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>20K</td>
+    <td class='sh'>484bd00...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("484bd00dadd6694acef797a0b1bc92557eefd601dbd014af5e632025ac069448", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-usb-xhci-hcd-6.12.74-r1.apk'>kmod-usb-xhci-hcd-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>112K</td>
+    <td class='sh'>cee9d17...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("cee9d1750becdb3ff2c614e941442690abec235df317206d30592de2e9faf53f", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-usb-xhci-mtk-6.12.74-r1.apk'>kmod-usb-xhci-mtk-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>20K</td>
+    <td class='sh'>173f478...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("173f4781e33348b8a92c62b26d710c6398957c5fb7e680acf87cba551ef37368", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-veth-6.12.74-r1.apk'>kmod-veth-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>16K</td>
+    <td class='sh'>9b2a892...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("9b2a8928cca3f781a510ad19448a8c0e30af18c42caf09f8b87574bc30072468", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='kmod-xdp-sockets-diag-6.12.74-r1.apk'>kmod-xdp-sockets-diag-6.12.74-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>db6fe36...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("db6fe36ed0b5854abb757d829018326f75582288588dc77679b2b7c1dec0fb6a", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='libatomic1-14.3.0-r5.apk'>libatomic1-14.3.0-r5.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>6fba999...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("6fba999f8c3f4664329942b8f8488fa626505f95b573f00fd3f0db29330a737a", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='libc-1.2.5-r5.apk'>libc-1.2.5-r5.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>292K</td>
+    <td class='sh'>37df78a...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("37df78aa70335017b4cf3c35b06a27d17256c4c1888ed694aaebb5d83f66930e", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='libgcc1-14.3.0-r5.apk'>libgcc1-14.3.0-r5.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>52K</td>
+    <td class='sh'>d8b5480...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("d8b548046d39ba8dd6902c2f1f2348bcfe1aab276660adff42d524664fd147b5", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='libpthread-1.2.5-r5.apk'>libpthread-1.2.5-r5.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>2ff9fd1...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("2ff9fd162a3139cdec9750fdd209073b6ff85b12989fb7946f71aeb5c4adaad6", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='librt-1.2.5-r5.apk'>librt-1.2.5-r5.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>e276773...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("e276773fff283b1e00cd6f840110cc18cf5ef310f28da1ec2fc901b45a135d11", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='libstdcpp6-14.3.0-r5.apk'>libstdcpp6-14.3.0-r5.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>632K</td>
+    <td class='sh'>b0a3d60...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("b0a3d6041f9ebbb9acc05c032572790f1d225bf3f4ac69190a4615f861481b44", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='mtd-27.apk'>mtd-27.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>16K</td>
+    <td class='sh'>f91cd81...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("f91cd81399cd14a1115e409246464f699904c91cc43cb510de5b4dbdcb560e04", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='ntfs3-mount-10.apk'>ntfs3-mount-10.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>d7f85b1...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("d7f85b1dcc312f808dd0ba74c429394b45bd6719046f761f7ef5e6434b7ca883", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>💾 <a href='packages.adb'>packages.adb</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>24K</td>
+    <td class='sh'>d8760a0...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("d8760a0bbd23c76e6a2ade95e39fb6d3628a94006e13d4cc0d32f66091167bf6", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='ubi-utils-2.3.0-r1.apk'>ubi-utils-2.3.0-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>120K</td>
+    <td class='sh'>2b8abb4...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("2b8abb4ba04a4fc6a45e280ca3282ff25fef1b56d9de42d98785527fb5aba01f", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  <tr>
+    <td class='n'>📦 <a href='uboot-envtools-2025.10-r1.apk'>uboot-envtools-2025.10-r1.apk</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>20K</td>
+    <td class='sh'>cb76b9f...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("cb76b9fb528e683486bc31384cd989c17c9b760f403a4cc69ccd8d970b4dfdc7", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 16:00:20</td>
+  </tr>
+  </tbody>
+</table>
+<footer>
+  <p>由 Local Builder 生成于 2026 年 04 月 02 日 16:00:20</p>
+  <p>仓库地址: <a href='https://github.com/LetsShareAll/OpenWrtPackages'>LetsShareAll/OpenWrtPackages</a></p>
+</footer>
+</div>
+</body></html>

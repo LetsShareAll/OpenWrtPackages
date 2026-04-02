@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+  <meta charset='utf-8'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <link rel='icon' href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>⚙️</text></svg>' />
+  <link rel='stylesheet' href='https://downloads.immortalwrt.org/openwrt.css' />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark.min.css'>
+  <script src='https://cdn.jsdelivr.net/npm/marked/marked.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js'></script>
+  <script>hljs.highlightAll();</script>
+  <title>/openwrt/25.12.2/targets/mediatek/filogic 的索引</title>
+  <style>
+    .copy-btn {
+      cursor: pointer;
+      margin-left: 5px;
+      display: inline-block;
+      transition: all 0.2s ease;
+    }
+    .copy-btn:active {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+    .copy-btn.success {
+      color: #4CAF50;
+      transform: scale(1.2);
+      animation: pop 0.3s ease-in-out;
+    }
+    @keyframes pop {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+    .search-input {
+      width: 100%;
+      padding: 5px 15px;
+      margin-bottom: 5px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 0.5em #999;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .search-input:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 0.5em rgba(0, 123, 255, 0.5);
+    }
+    /* README 区块样式 */
+    .readme-wrapper {
+      margin-top: 16px;
+      padding: 12px !important;
+      background: #f5f5f5;
+      border-top: 1px solid #e1e4e8;
+      box-shadow: 0 0 0.5em #999 !important;
+    }
+    .readme-wrapper h2 {
+      margin-top: 0;
+    }
+    .markdown-body {
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 12px;
+      border-radius: 4px;
+      background-color: #fff;
+    }
+    .readme-content {
+      background: #fafafa;
+      padding: 10px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      font-family: monospace;
+    }
+    .hljs {
+      border-radius: 4px;
+    }
+    /* 代码块复制按钮样式 */
+    .code-block-wrapper {
+      position: relative;
+    }
+    .copy-code-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      padding: 4px 8px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      z-index: 10;
+      transition: background-color 0.2s;
+    }
+    .copy-code-btn:hover {
+      background-color: #45a049;
+    }
+    .copy-code-btn.copied {
+      background-color: #2196F3;
+    }
+  </style>
+  <script>
+    function copyToClipboard(sha, btnElement) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(sha)
+          .then(() => {
+            btnElement.textContent = '✅';
+            btnElement.classList.add('success');
+            setTimeout(() => {
+              btnElement.textContent = '📋';
+              btnElement.classList.remove('success');
+            }, 1000);
+          })
+          .catch(() => showTooltip('复制失败', event));
+      } else {
+        prompt('请手动复制完整 SHA256：', sha);
+      }
+    }
+    function showTooltip(text, e) {
+      const tooltip = document.getElementById('tooltip');
+      tooltip.textContent = text;
+      tooltip.style.display = 'block';
+      tooltip.style.left = (e.clientX + 10) + 'px';
+      tooltip.style.top = (e.clientY + 10) + 'px';
+      setTimeout(() => tooltip.style.display = 'none', 1000);
+    }
+  </script>
+</head>
+<body>
+<div class='container'>
+<input type='text' id='globalSearch' placeholder='全局搜索...' class='search-input' onkeyup="if(event.key==='Enter' && this.value.trim()){window.location.href='/search.html?q='+encodeURIComponent(this.value.trim());}">
+<h1>索引：<a href='/'><em>根目录</em></a> / <a href='/openwrt/'>openwrt</a> / <a href='/openwrt/25.12.2/'>25.12.2</a> / <a href='/openwrt/25.12.2/targets/'>targets</a> / <a href='/openwrt/25.12.2/targets/mediatek/'>mediatek</a> / <a href="/openwrt/25.12.2/targets/mediatek/filogic/">filogic</a> /</h1>
+<hr>
+<table>
+  <thead>
+    <tr>
+      <th class='n'>文件名</th>
+      <th class='m'>类型</th>
+      <th class='s'>大小</th>
+      <th class='h'>SHA256</th>
+      <th class='d'>修改日期</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class='n'>↩️ <a href='../'>上级目录</a>/</td>
+    <td class='m'>目录</td>
+    <td class='s'>-</td>
+    <td class='sh'>-</td>
+    <td class='d'>-</td>
+  </tr>
+  <tr>
+    <td class='n'>📁 <a href='packages/'>packages/</a></td>
+    <td class='m'>目录</td>
+    <td class='s'>-</td>
+    <td class='sh'>-</td>
+    <td class='d'>2026 年 04 月 02 日 21:07:48</td>
+  </tr>
+  <tr>
+    <td class='n'>📄 <a href='config.buildinfo'>config.buildinfo</a></td>
+    <td class='m'>plain</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>b676460...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("b676460bed0534b6e29fc14e6ddb5f25fabbe2c0fd4acfb6056e2a0cd494ea83", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:48</td>
+  </tr>
+  <tr>
+    <td class='n'>📄 <a href='feeds.buildinfo'>feeds.buildinfo</a></td>
+    <td class='m'>plain</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>ac4f794...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("ac4f7948d5f06edf9a82752853b32894374ee293e323ca5a59ce2b7e87042b66", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:48</td>
+  </tr>
+  <tr>
+    <td class='n'>💿 <a href='mt7981-ram-ddr3-bl2.bin'>mt7981-ram-ddr3-bl2.bin</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>208K</td>
+    <td class='sh'>c04cf66...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("c04cf66b543d726defa0c5b8fdb55a83348429f3cfa1bc9df74e0c7ca86d0ed4", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:48</td>
+  </tr>
+  <tr>
+    <td class='n'>💿 <a href='mt7981-ram-ddr4-bl2.bin'>mt7981-ram-ddr4-bl2.bin</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>208K</td>
+    <td class='sh'>9b5905f...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("9b5905fb9c59441bf21a967fffedc42da45b944a6a61f3eed0e4f394a1e8c258", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:48</td>
+  </tr>
+  <tr>
+    <td class='n'>💿 <a href='mt7986-ram-ddr3-bl2.bin'>mt7986-ram-ddr3-bl2.bin</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>192K</td>
+    <td class='sh'>bf17dcf...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("bf17dcfe6604bbfc416f60281c4a29fb2d82ce7e9dc5924cd24fb7f20c833793", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:48</td>
+  </tr>
+  <tr>
+    <td class='n'>💿 <a href='mt7986-ram-ddr4-bl2.bin'>mt7986-ram-ddr4-bl2.bin</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>192K</td>
+    <td class='sh'>eee675b...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("eee675befc47ad1e5b1195188fa36aded4405ead3401e1744aeed1f8a6c01f95", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:48</td>
+  </tr>
+  <tr>
+    <td class='n'>💿 <a href='mt7987-ram-comb-bl2.bin'>mt7987-ram-comb-bl2.bin</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>236K</td>
+    <td class='sh'>263d43c...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("263d43cb2c75b3ab1a4a840392d5c0555cf0fbe6c89274e35545b6e25146b7a5", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:48</td>
+  </tr>
+  <tr>
+    <td class='n'>💿 <a href='mt7988-ram-comb-bl2.bin'>mt7988-ram-comb-bl2.bin</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>236K</td>
+    <td class='sh'>8d0b58b...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("8d0b58b8628ce6cd0bb819c7d5e97a554f6f3b77dba3e419fe2f9154b599728d", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:48</td>
+  </tr>
+  <tr>
+    <td class='n'>💿 <a href='mt7988-ram-ddr4-bl2.bin'>mt7988-ram-ddr4-bl2.bin</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>236K</td>
+    <td class='sh'>471dcc8...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("471dcc880f6783a1223b7b7bc414bdad6ea588ba71e5408090a0df3fa88d9fde", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:48</td>
+  </tr>
+  <tr>
+    <td class='n'>📄 <a href='openwrt-mediatek-filogic-bananapi_bpi-r4-emmc-bl31-uboot.fip'>openwrt-mediatek-filogic-bananapi_bpi-r4-emmc-bl31-uboot.fip</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>1.2M</td>
+    <td class='sh'>4f62ff0...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("4f62ff00b5e41766617a2ea85248cd6d01721222397919693df63769ad22fbf8", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:49</td>
+  </tr>
+  <tr>
+    <td class='n'>💿 <a href='openwrt-mediatek-filogic-bananapi_bpi-r4-emmc-gpt.bin'>openwrt-mediatek-filogic-bananapi_bpi-r4-emmc-gpt.bin</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>20K</td>
+    <td class='sh'>cbc9226...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("cbc9226d97238d085971f9e9a40012afbfd2e30db77ac3a05fa6b285f61e1f03", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:49</td>
+  </tr>
+  <tr>
+    <td class='n'>💿 <a href='openwrt-mediatek-filogic-bananapi_bpi-r4-emmc-preloader-8g.bin'>openwrt-mediatek-filogic-bananapi_bpi-r4-emmc-preloader-8g.bin</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>252K</td>
+    <td class='sh'>0d62d64...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("0d62d646c639b8cf90483c6c9c7946611056c80dbcfa815ba5a372e8e1778fdc", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:49</td>
+  </tr>
+  <tr>
+    <td class='n'>💿 <a href='openwrt-mediatek-filogic-bananapi_bpi-r4-emmc-preloader.bin'>openwrt-mediatek-filogic-bananapi_bpi-r4-emmc-preloader.bin</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>252K</td>
+    <td class='sh'>33b3670...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("33b36702432fc42820211015de0668a33403a46c356748a84c5020b59d793fbf", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:49</td>
+  </tr>
+  <tr>
+    <td class='n'>📄 <a href='openwrt-mediatek-filogic-bananapi_bpi-r4-initramfs-recovery.itb'>openwrt-mediatek-filogic-bananapi_bpi-r4-initramfs-recovery.itb</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>22M</td>
+    <td class='sh'>939768b...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("939768b596bc04457adb349b13c7720218595981b87b523f723a36ad11a988a3", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:48</td>
+  </tr>
+  <tr>
+    <td class='n'>📝 <a href='openwrt-mediatek-filogic-bananapi_bpi-r4.manifest'>openwrt-mediatek-filogic-bananapi_bpi-r4.manifest</a></td>
+    <td class='m'>plain</td>
+    <td class='s'>8.0K</td>
+    <td class='sh'>3c6574c...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("3c6574cf9bafeec11bf47af6422fc7d9d618267e5a06d93e4b2ebc6e2f6965f8", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:49</td>
+  </tr>
+  <tr>
+    <td class='n'>🗄️ <a href='openwrt-mediatek-filogic-bananapi_bpi-r4-sdcard_8g.img.gz'>openwrt-mediatek-filogic-bananapi_bpi-r4-sdcard_8g.img.gz</a></td>
+    <td class='m'>gzip</td>
+    <td class='s'>42M</td>
+    <td class='sh'>0cd5e39...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("0cd5e39136247c01a75fbf2d39895e5363dcf317e3297ee41b55cb7d2ac9651a", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:49</td>
+  </tr>
+  <tr>
+    <td class='n'>🗄️ <a href='openwrt-mediatek-filogic-bananapi_bpi-r4-sdcard.img.gz'>openwrt-mediatek-filogic-bananapi_bpi-r4-sdcard.img.gz</a></td>
+    <td class='m'>gzip</td>
+    <td class='s'>48M</td>
+    <td class='sh'>9b4579b...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("9b4579b359a2832c743e3ccd4a837b53486bec24000e34268188154861004124", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:49</td>
+  </tr>
+  <tr>
+    <td class='n'>📄 <a href='openwrt-mediatek-filogic-bananapi_bpi-r4-snand-bl31-uboot.fip'>openwrt-mediatek-filogic-bananapi_bpi-r4-snand-bl31-uboot.fip</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>1.2M</td>
+    <td class='sh'>6a58a40...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("6a58a4024986bb2e3dc7f0acc678786838ab31eeea1aabcc6bb56440a1dec7f7", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:49</td>
+  </tr>
+  <tr>
+    <td class='n'>💿 <a href='openwrt-mediatek-filogic-bananapi_bpi-r4-snand-preloader-8g.bin'>openwrt-mediatek-filogic-bananapi_bpi-r4-snand-preloader-8g.bin</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>264K</td>
+    <td class='sh'>339df9d...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("339df9dd82ef026098712527e2b229346e32187ff8dcc07688e177daf79decd9", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:49</td>
+  </tr>
+  <tr>
+    <td class='n'>💿 <a href='openwrt-mediatek-filogic-bananapi_bpi-r4-snand-preloader.bin'>openwrt-mediatek-filogic-bananapi_bpi-r4-snand-preloader.bin</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>264K</td>
+    <td class='sh'>cc0f1f0...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("cc0f1f09de342b5813a202bef53e56ec998da49bf8ad5c8f1e60f25f236a90e0", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:49</td>
+  </tr>
+  <tr>
+    <td class='n'>📄 <a href='openwrt-mediatek-filogic-bananapi_bpi-r4-squashfs-sysupgrade.itb'>openwrt-mediatek-filogic-bananapi_bpi-r4-squashfs-sysupgrade.itb</a></td>
+    <td class='m'>octet-stream</td>
+    <td class='s'>25M</td>
+    <td class='sh'>47ed6d3...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("47ed6d30aee979cc6c5ace6f688ae5b5567ef2daa8dbf2ecbfa0eedecfe9749e", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:49</td>
+  </tr>
+  <tr>
+    <td class='n'>📄 <a href='profiles.json'>profiles.json</a></td>
+    <td class='m'>json</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>206dbf6...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("206dbf6827831ca1c8399f805a7a145c1cec8aec89ed312166d0d8d7a8bf00e8", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:49</td>
+  </tr>
+  <tr>
+    <td class='n'>📄 <a href='sha256sums'>sha256sums</a></td>
+    <td class='m'>plain</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>2615399...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("26153998e9f1e69299c1c2d2c97fa9cd11ef6f845c6dfe7e45bdfa705e6c646b", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:49</td>
+  </tr>
+  <tr>
+    <td class='n'>📄 <a href='version.buildinfo'>version.buildinfo</a></td>
+    <td class='m'>plain</td>
+    <td class='s'>4.0K</td>
+    <td class='sh'>05f6cea...<span class='copy-btn' title='点击复制完整 SHA256' onclick='copyToClipboard("05f6cea7ac9e5c3d2d73225400b4dc3cf51eb8002f54cf6d05e5934c1805c60c", this)'>📋</span></td>
+    <td class='d'>2026 年 04 月 02 日 21:07:48</td>
+  </tr>
+  </tbody>
+</table>
+<footer>
+  <p>由 Local Builder 生成于 2026 年 04 月 02 日 19:00:11</p>
+  <p>仓库地址: <a href='https://github.com/LetsShareAll/OpenWrtPackages'>LetsShareAll/OpenWrtPackages</a></p>
+</footer>
+</div>
+</body></html>
