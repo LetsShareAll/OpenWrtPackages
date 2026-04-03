@@ -179,7 +179,7 @@
 </div>
 <script>
   (function() {
-    const markdownText = "# \u5bfc\u5165\u4ed3\u5e93\u516c\u94a5\n\n\u4e0b\u8f7d `public-key.pem`\uff1a\n\n```bash\n# \u5728\u8def\u7531\u5668\u4e0a\u6267\u884c\nwget -O /etc/apk/keys/lssa.pub https://pkgs.lssa.fun/immortalwrt/public-key.pem\n```\n";
+    const markdownText = "# \u5bfc\u5165\u4ed3\u5e93\u516c\u94a5\n\n\u4e0b\u8f7d `public-key.pem`\uff1a\n\n```bash\n# \u5728\u8def\u7531\u5668\u4e0a\u6267\u884c\nwget -O /etc/apk/keys/lssa-immortalwrt.pem https://pkgs.lssa.fun/immortalwrt/public-key.pem\n```\n";
     const html = marked.parse(markdownText);
     document.getElementById('readme-content').innerHTML = html;
     if (typeof hljs !== 'undefined') {

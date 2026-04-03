@@ -4,5 +4,5 @@
 
 ```bash
 # 在路由器上执行
-wget -O /etc/apk/keys/lssa.pub https://pkgs.lssa.fun/openwrt/public-key.pem
+wget -O /etc/apk/keys/lssa-openwrt.pem https://pkgs.lssa.fun/openwrt/public-key.pem
 ```

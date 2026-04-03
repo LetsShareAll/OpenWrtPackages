@@ -4,5 +4,5 @@
 
 ```bash
 # 在路由器上执行
-wget -O /etc/apk/keys/lssa.pub https://pkgs.lssa.fun/immortalwrt/public-key.pem
+wget -O /etc/apk/keys/lssa-immortalwrt.pem https://pkgs.lssa.fun/immortalwrt/public-key.pem
 ```
