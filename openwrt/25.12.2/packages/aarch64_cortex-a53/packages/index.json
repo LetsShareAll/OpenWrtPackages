@@ -37,7 +37,11 @@
     "uwsgi-cgi-plugin": "2.0.30-r1",
     "uwsgi-luci-support": "2.0.30-r1",
     "uwsgi-syslog-plugin": "2.0.30-r1",
+    "v2ray-geoip": "202601050204-r1",
+    "v2ray-geosite": "20260117053629-r1",
     "wget-ssl": "1.25.0-r2",
-    "wsdd2": "2023.12.21~b676d8ac-r2"
+    "wsdd2": "2023.12.21~b676d8ac-r2",
+    "zoneinfo-asia": "2025c-r1",
+    "zoneinfo-core": "2025c-r1"
   }
 }

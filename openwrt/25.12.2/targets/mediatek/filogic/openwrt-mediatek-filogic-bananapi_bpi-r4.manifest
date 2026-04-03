@@ -153,6 +153,7 @@ libustream-openssl20201210 - 2026.03.01~99f1c0db-r1
 libuuid1 - 2.41.3-r1
 logd - 2025.10.30~6f78fa49-r1
 lua - 5.1.5-r11
+luci-app-argon-config - 1.0-r20230608
 luci-app-easyupdate - 1.0-r20211125
 luci-app-firewall - 26.091.58222~00c1a0a
 luci-app-nginx - 20230323-r1
